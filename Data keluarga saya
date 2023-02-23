@@ -1,0 +1,81 @@
+using System;  
+    
+  public class HelloWorld  
+  {  
+          static public void Main()  
+          {  
+                    
+                  familyhobi family = new familyhobi();  
+                  familyhobi ayah = new Ayah();  
+                  familyhobi ibu = new Ibu();  
+                  familyhobi saya = new Saya();  
+                  familyhobi adik = new Adik();  
+    
+                  familydata ayahku = new familydata("Rahmat Hidayat", 49, +62819980746408);  
+                  familydata ibuku = new familydata("Yuliatin", 41, +62857895672);  
+                  familydata aku = new familydata("Stefani  Maulidiyah", 16, +62895279516);  
+    
+    
+                  Console.WriteLine("data ayah:\n" + ayahku.nama + "\n" + ayahku.umur + "\n" + ayahku.nohp);  
+                  ayah.Hobi();  
+                  Console.WriteLine();  
+                    
+                  Console.WriteLine("data ibu:\n" + ibuku.nama + "\n" + ibuku.umur + "\n" + ibuku.nohp);  
+                  ibu.Hobi();  
+                  Console.WriteLine();  
+                    
+                  Console.WriteLine("data saya:\n" + aku.nama + "\n" + aku.umur + "\n" + aku.nohp);  
+                  saya.Hobi();  
+                  Console.WriteLine();  
+                    
+    
+          }  
+            
+          class familydata  
+          {  
+                  public string nama;  
+                  public int umur;  
+                  public long nohp;  
+    
+                  public familydata(string Nama, int Umur, long Nohp)  
+                  {  
+                          nama = Nama;  
+                          umur = Umur;  
+                          nohp = Nohp;  
+                  }  
+          }  
+            
+          class familyhobi  
+          {  
+                  public virtual void Hobi()  
+                  {  
+                          Console.WriteLine("Hobi");  
+                  }  
+          }  
+            
+          class Ayah : familyhobi  
+          {  
+                  public override void Hobi()  
+                  {  
+                          Console.WriteLine("memancing");  
+                  }  
+          }  
+            
+          class Ibu : familyhobi  
+          {  
+                  public override void Hobi()  
+                  {  
+                          Console.WriteLine("memasak");  
+                  }  
+          }  
+            
+          class Saya : familyhobi  
+          {  
+                  public override void Hobi()  
+                  {  
+                          Console.WriteLine("mendengar musik");  
+                  }  
+          }  
+            
+    
+  }
